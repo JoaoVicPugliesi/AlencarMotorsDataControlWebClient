@@ -1,6 +1,6 @@
 # Alencar Motors Data Control 🚀
 
-![AlencarMotorsDataControl](https://www.alencarmotorsdatacontrol.com)
+https://www.alencarmotorsdatacontrol.com
 
 Alencar Motors Data Control is responsible for capturing sales staff data via a custom spreadsheet, enabling administrators to set targets and analyze the data based on the defined timeframe.
 
