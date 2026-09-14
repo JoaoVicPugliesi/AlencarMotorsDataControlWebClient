@@ -1,0 +1,38 @@
+COMMERCIAL SOFTWARE LICENSE AGREEMENT
+--------------------------------------------------------------------------------
+Copyright (c) 2026 Alencar Motors (https://alencarmotors.com). All rights reserved.
+
+NOTICE TO USER: PLEASE READ THIS CONTRACT CAREFULLY. BY USING, COPYING, OR 
+DISTRIBUTING ALL OR ANY PORTION OF THIS SOFTWARE, YOU ACCEPT ALL THE TERMS AND 
+CONDITIONS OF THIS AGREEMENT.
+
+1. OWNERSHIP AND LICENSE GRANT
+This software is proprietary and confidential property of Alencar Motors. 
+Subject to the terms of this Agreement, Alencar Motors grants you a limited, 
+non-exclusive, non-transferable, non-sublicensable license to use this software 
+solely for your internal evaluation or approved business operations.
+
+2. RESTRICTIONS
+You shall not, and shall not permit any third party to:
+(a) Reverse engineer, decompile, or disassemble the software.
+(b) Modify, adapt, translate, or create derivative works based upon the software.
+(c) Rent, lease, sublicense, distribute, or lend the software to any third party.
+(d) Use the software to provide commercial services or SaaS to third parties 
+    without prior explicit written consent from Alencar Motors.
+
+3. CONFIDENTIALITY
+The software source code, structure, and organization are the valuable trade 
+secrets and confidential information of Alencar Motors. You agree to hold such 
+information in strict confidence.
+
+4. NO WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS 
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+
+5. LIMITATION OF LIABILITY
+IN NO EVENT SHALL ALENCAR MOTORS BE LIABLE FOR ANY DAMAGES WHATSOEVER (INCLUDING, 
+WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, 
+LOSS OF BUSINESS INFORMATION, OR OTHER PECUNIARY LOSS) ARISING OUT OF THE USE 
+OF OR INABILITY TO USE THIS SOFTWARE.
+--------------------------------------------------------------------------------
