@@ -23,7 +23,7 @@ Alencar Motors Data Control is responsible for capturing sales staff data via a 
 Clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/JoaoVicPugliesi/AlencarMotorsDataControl_WebClient.git
+git clone https://github.com/JoaoVicPugliesi/AlencarMotorsDataControlWebClient.git
 cd project
 ```
 

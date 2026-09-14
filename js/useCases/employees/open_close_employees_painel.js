@@ -35,7 +35,7 @@ async function open_employees_painel_helper(btn) {
     input.value = '';
     const { status: get_stats_today_status, json: get_stats_today_json } = await get_stats('today', null, null, id);
     if (get_stats_today_status === 404) {
-        await post_stats(id);
+        await post_stats(id, true);
     }
     const painel = document.querySelector('.employees-main-painel');
     const { status: get_stats_month_status, json: get_stats_month_json } = await get_stats('month', null, null, id);
@@ -70,7 +70,7 @@ async function open_employees_painel_helper(btn) {
             'loading',
             'Salvando planilha'
         );
-        await post_stats(id);
+        await post_stats(id, false);
         loading_message.remove();
     });
 }
