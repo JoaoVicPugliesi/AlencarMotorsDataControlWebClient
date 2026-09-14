@@ -35,7 +35,7 @@ function show_message(parent, mode, message, delay = 3000) {
 
         setTimeout(() => {
             message_holder.remove();
-        }, 300);
+        }, 1000);
     }, delay);
 
     return message_holder;

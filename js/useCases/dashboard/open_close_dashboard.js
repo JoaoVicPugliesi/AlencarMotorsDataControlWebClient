@@ -52,7 +52,6 @@ function close_dashboard(type) {
 }
 
 function open_close_dashboard(employees, type) {
-
     open_dashboard(employees, type);
     close_dashboard(type);
 }

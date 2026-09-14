@@ -13,6 +13,12 @@ async function open_employees_painel_helper(btn) {
     const input = confirm.querySelector(
         '.employee-main-confirm-input input'
     );
+    const employees_main = document.querySelector('.employees-main');
+    const loading_message = show_message(
+        employees_main,
+        'loading',
+        'Carregando Perfil'
+    );
     const {
         status: post_login_status,
         json: post_login_json
@@ -20,7 +26,7 @@ async function open_employees_painel_helper(btn) {
         id: id,
         password: input.value
     });
-
+    loading_message.remove();
     if (post_login_status !== 200) {
         const employees_main = document.querySelector('.employees-main');
         show_message(employees_main, 'error', post_login_json.message);
@@ -59,7 +65,13 @@ async function open_employees_painel_helper(btn) {
     home_header.classList.add('hidden');
     const save_btn = document.querySelector('.employees-main-painel-save-command');
     save_btn.addEventListener('click', async () => {
+        const loading_message = show_message(
+            painel,
+            'loading',
+            'Salvando planilha'
+        );
         await post_stats(id);
+        loading_message.remove();
     });
 }
 

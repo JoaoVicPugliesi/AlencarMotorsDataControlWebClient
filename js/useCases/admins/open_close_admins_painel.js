@@ -8,6 +8,12 @@ async function open_admins_main_painel_helper(btn) {
     const input = confirm.querySelector(
         '.admin-main-confirm-input input'
     );
+    const admins_main = document.querySelector('.admins-main');
+    const loading_message = show_message(
+        admins_main,
+        'loading',
+        'Carregando Perfil'
+    );
     const {
         status,
         json
@@ -15,7 +21,7 @@ async function open_admins_main_painel_helper(btn) {
         id: id,
         password: input.value
     });
-
+    loading_message.remove();
     if (status !== 200) {
         const admins_main = document.querySelector('.admins-main');
         show_message(admins_main, 'error', json.message);

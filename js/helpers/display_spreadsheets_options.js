@@ -1,4 +1,4 @@
-import select_spreadsheet_option from "./select_spreadsheet_option.js";
+import choose_spreadsheet_option from "./choose_spreadsheet_option.js";
 
 function display_spreadsheets_options (employees) {
     const header = document.querySelector('.admins-main-painel-spreadsheets-header');
@@ -13,7 +13,7 @@ function display_spreadsheets_options (employees) {
         }
     })
 
-    select_spreadsheet_option();
+    choose_spreadsheet_option();
 }
 
 export default display_spreadsheets_options;

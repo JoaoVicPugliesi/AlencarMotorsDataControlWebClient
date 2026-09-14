@@ -8,7 +8,7 @@ import open_sandwich from "./js/helpers/open_sandwich.js";
 import open_close_admins_painel from "./js/useCases/admins/open_close_admins_painel.js";
 import open_close_admins_painel_goals from "./js/useCases/admins/open_close_admins_painel_goals.js";
 import display_dashboards from "./js/useCases/dashboard/display_dashboards.js";
-import save_in_storage_goal from "./js/useCases/dashboard/save_in_storage_goal.js";
+import save_locally_goal from "./js/useCases/dashboard/save_locally_goal.js";
 import display_cards_caller from "./js/helpers/display_cards.js";
 import open_close_spreadsheets from "./js/useCases/admins/open_close_spreadsheets.js";
 import display_spreadsheets_options from "./js/helpers/display_spreadsheets_options.js";
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     loading_message.remove();
     if(status == 200) {
         scroll_to_section('employees');
-        await save_in_storage_goal();
+        await save_locally_goal();
         display_cards_caller(employees);
         display_dashboards(employees);
         display_spreadsheets_options(employees);
