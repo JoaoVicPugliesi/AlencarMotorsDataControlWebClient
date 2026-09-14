@@ -6,7 +6,7 @@ Alencar Motors Data Control is responsible for capturing sales staff data via a 
 
 ## 📸 Application Architecture
 
-![WEBCLIENT/INTERFACE/FRONTEND](https://res.cloudinary.com/dibxo0toz/image/upload/v1789388314/webinfrastructure-database.png)
+![WEBCLIENT/INTERFACE/FRONTEND](https://res.cloudinary.com/dibxo0toz/image/upload/v1789388315/webclient-interface-frontend.png)
 
 ![WEBSERVICE/API/BACKEND](https://res.cloudinary.com/dibxo0toz/image/upload/v1789388315/webservice-api-backend.png)
 
