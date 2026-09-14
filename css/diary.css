@@ -25,6 +25,9 @@
     box-sizing: border-box;
     left: -200%;
     z-index: 10;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .employees-main-painel-diary.opened, .admins-main-painel-spreadsheets-diary.opened {
@@ -136,4 +139,41 @@
     justify-content: flex-end;
     margin-top: 1.25rem;
     gap: 0.5rem;
+}
+
+.diary-customer-portifolios {
+    position: absolute;
+    height: 100%;
+    background: var(--background-color-2);
+    width: 10rem;
+    top: 0;
+    z-index: 2;
+    left: 100%;
+   
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.diary-customer-portifolios-list, .diary-customer-portifolios-add {
+    background: var(--gold-color);
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-direction: column;
+    user-select: none;
+    cursor: pointer;
+}
+
+.diary-customer-portifolios-add {
+    background: var(--background-color-2);
+}
+
+.diary-customer-portifolios-list.blocked, .diary-customer-portifolios-add.blocked {
+    background-color: #666666;
+    cursor: none;
+    pointer-events: none;
 }
