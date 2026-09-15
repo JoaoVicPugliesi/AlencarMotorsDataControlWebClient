@@ -164,6 +164,10 @@
     text-align: center;
 }
 
+.diary-customer-portifolios-commands.closed {
+    display: none;
+}
+
 .diary-customer-portifolios-list-command,
 .diary-customer-portifolios-add-command {
     background: var(--green-color);
@@ -201,22 +205,18 @@
     display: none;
 }
 
-.diary-customer-portifolios-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .diary-customer-portifolios-list.opened {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.diary-customer-portifolios-list.opened .diary-customer-portifolios-commands {
-    display: none;
+.diary-customer-portifolios-list-close {
+    position: absolute;
+    left: 95%;
+    top: 2%;
+    transform: translate(-95%, -2%);
 }
-
 
 .diary-customer-portifolios-list-display {
     width: 100%;
@@ -307,4 +307,27 @@
 
 .diary-customer-portifolios-list-filters input::placeholder {
     color: rgba(0, 0, 0, 0.45);
+}
+
+.diary-customer-portifolios-search-command,
+.diary-customer-portifolios-reset-command,
+.diary-customer-portifolios-comeback-command {
+    width: 2rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--diary-color);
+
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.diary-customer-portifolios-search-command:hover,
+.diary-customer-portifolios-reset-command:hover,
+.diary-customer-portifolios-comeback-command:hover {
+    transform: scale(1.10);
 }
