@@ -1,6 +1,6 @@
 import get_stats from "../../infra/use_cases/stat/get_stats.js";
-import filter_dashboard_header from "./filter_dashboard_header.js";
-import make_dashboard_header from "./make_dashboard_header.js";
+import filter_dashboard_fields from "./filter_dashboard_fields.js";
+import make_dashboard_fields from "./make_dashboard_fields.js";
 import show_message from '../../helpers/show_message.js';
 
 function open_dashboard(employees, type) {
@@ -25,8 +25,8 @@ function open_dashboard(employees, type) {
         const { json } = await get_stats('period', null, null, null);
         loading_message.remove();
         const { stats, initial_day, final_day } = json;
-        make_dashboard_header(stats, type);
-        filter_dashboard_header(
+        make_dashboard_fields(stats, type);
+        filter_dashboard_fields(
             employees,
             stats,
             type

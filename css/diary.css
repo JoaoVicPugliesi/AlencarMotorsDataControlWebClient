@@ -30,9 +30,9 @@
     scrollbar-width: none;
 }
 
-.employees-main-painel-diary {
+/* .employees-main-painel-diary {
     left: 0;
-}
+} */
 
 .employees-main-painel-diary.opened, .admins-main-painel-spreadsheets-diary.opened {
     left: 0;

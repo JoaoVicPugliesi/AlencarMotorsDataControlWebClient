@@ -1,11 +1,12 @@
-function dashboard_header_component(name, code, total) {
+function dashboard_header_component () {
     return `
-        <div class="dashboard-header-component" data-total="${total}" data-code="${code}">
-            <div >
-                <h3>${name}</h3>
-            </div>
-            <div>
-                <h3>${total}</h3>
+        <div class="dashboard-header">
+            <div><h3>Dashboard</h3></div>
+            <div class="dashboard-header-period">
+                <div>
+                    <h3>04/09/2026 - 25/09/2026</h3>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
             </div>
         </div>
     `

@@ -113,7 +113,7 @@
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
 }
 
-.dashboard-display-header {
+.dashboard-display-fields {
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
@@ -125,14 +125,14 @@
     color: var(--background-color);
 }
 
-.dashboard-display-header div {
+.dashboard-display-fields div {
     width: max-content;
     display: flex;
     cursor: pointer;
     flex-direction: column;
 }
 
-.dashboard-display-header div h3 {
+.dashboard-display-fields div h3 {
     width: 100%;
 }
 
@@ -226,7 +226,7 @@
     cursor: pointer;
 }
 
-.dashboard-header-component.filtered {
+.dashboard-field-component.filtered {
     color: black;
 }
 
@@ -295,6 +295,6 @@
     user-select: none;
 }
 
-.dashboard-painel-display-header, .dashboard-display-header, .dashboard-content, .dashboard-bottom {
+.dashboard-painel-display-header, .dashboard-display-fields, .dashboard-content, .dashboard-bottom {
     min-height: max-content;
 }

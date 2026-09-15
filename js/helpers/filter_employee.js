@@ -12,7 +12,7 @@ function filter_employee(employee, employees, data, type) {
 
     const dashboard_header =
         dashboard.querySelectorAll(
-            '.dashboard-header-component'
+            '.dashboard-field-component'
         );
 
     const dashboard_completeness =

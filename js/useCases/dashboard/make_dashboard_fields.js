@@ -1,8 +1,8 @@
 import counters from "../../../data/counters.js";
 import default_data from "../../../data/default_data.js";
-import dashboard_header_component from "../../components/dashboard/dashboard_header_component.js";
+import dashboard_field_component from "../../components/dashboard/dashboard_field_component.js";
 
-function make_dashboard_header(data, type) {
+function make_dashboard_fields(data, type) {
     if (!Array.isArray(data) || data.length === 0) {
         data = [...default_data]
     }
@@ -10,11 +10,11 @@ function make_dashboard_header(data, type) {
         `.dashboard[data-dashboard="${type}"]`
     );
     if (!dashboard) return;
-    const dashboard_display_header = dashboard.querySelector(
-        '.dashboard-display-header'
+    const dashboard_display_fields = dashboard.querySelector(
+        '.dashboard-display-fields'
     );
-    if (!dashboard_display_header) return;
-    dashboard_display_header.innerHTML = '';
+    if (!dashboard_display_fields) return;
+    dashboard_display_fields.innerHTML = '';
     const totals = {};
     data.forEach(row => {
         Object.entries(row).forEach(([key, value]) => {
@@ -37,16 +37,16 @@ function make_dashboard_header(data, type) {
             counter => counter.code === code
         );
         if (!counter) return;
-        const employee = dashboard_header_component(
+        const employee = dashboard_field_component(
             counter.name,
             code,
             total
         );
-        dashboard_display_header.insertAdjacentHTML(
+        dashboard_display_fields.insertAdjacentHTML(
             'beforeend',
             employee
         );
     });
 }
 
-export default make_dashboard_header;
+export default make_dashboard_fields;

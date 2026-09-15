@@ -1,7 +1,7 @@
 import show_message from "../../helpers/show_message.js";
 import get_stats from "../../infra/use_cases/stat/get_stats.js";
-import filter_dashboard_header from "./filter_dashboard_header.js";
-import make_dashboard_header from "./make_dashboard_header.js";
+import filter_dashboard_fields from "./filter_dashboard_fields.js";
+import make_dashboard_fields from "./make_dashboard_fields.js";
 
 async function choose_dashboard_period(employees, type) {
     const dashboard = document.querySelector(
@@ -51,8 +51,8 @@ async function choose_dashboard_period(employees, type) {
             );
         loading_message.remove();
         const { stats, initial_day, final_day } = json;
-        make_dashboard_header(stats, type);
-        filter_dashboard_header(employees, stats, type);
+        make_dashboard_fields(stats, type);
+        filter_dashboard_fields(employees, stats, type);
         dashboard_header_period.textContent = `${initial_day.split('-').reverse().join('-')} - ${final_day.split('-').reverse().join('-')}`;
         dashboard_period.classList.remove('opened');
         dashboard_initial_date.value = '';
