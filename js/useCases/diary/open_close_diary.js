@@ -7,7 +7,7 @@ import open_close_diary_customer_portifolios_add from "./open_close_diary_custom
 import open_close_diary_customer_portifolios_list from "./open_close_diary_customer_portifolios_list.js";
 
 function open_close_diary(id, el, mode, data, date, container, painel) {
-    el.removeEventListener('click', () => {});
+    el.removeEventListener('click', () => { });
     el.addEventListener('click', () => {
         const daily_data = data.find(item => item.date === date);
         if (!daily_data) {
@@ -31,7 +31,7 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
             '.diary-save-command'
         );
         if (save) {
-            save.removeEventListener('click', () => {})
+            save.removeEventListener('click', () => { })
             save.addEventListener('click', async () => {
                 const title = document.querySelector('.employees-main-painel-diary-title').value;
                 const description = document.querySelector('.employees-main-painel-diary-description').value;
@@ -41,8 +41,14 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
                     title: title,
                     description: description
                 }
+                const loading_message = show_message(
+                    container,
+                    'loading',
+                    'Salvando diário'
+                );
                 const res = await post_stats_diary(id, diary);
-                if(!res) return;
+                loading_message.remove();
+                if (!res) return;
                 const { status, json } = await get_stats('month', null, null, id);
                 const { stats, initial_day, final_day } = json;
                 open_close_diary(
