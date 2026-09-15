@@ -1,8 +1,8 @@
-import dashboard_component from "../../components/dashboard_component.js";
 import open_close_dashboard from "./open_close_dashboard.js";
 import open_close_dashboard_painel from "./open_close_dashboard_painel.js";
 import open_close_dashboard_period from "./open_close_dashboard_period.js";
 import choose_dashboard_period from './choose_dashboard_period.js';
+import dashboard_component from "../../components/dashboard/dashboard_component.js";
 const employees_main_painel = document.querySelector(
     '.employees-main-painel'
 );

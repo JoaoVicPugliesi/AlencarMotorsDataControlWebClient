@@ -15,7 +15,7 @@ import display_spreadsheets_options from "./js/helpers/display_spreadsheets_opti
 import show_message from "./js/helpers/show_message.js";
 import get_current_date from "./js/helpers/get_current_date.js";
 import diary from "./data/diary.js";
-import employee_diary_component from "./js/components/employee_diary_component.js";
+import diary_component from "./js/components/diary/diary_component.js";
 
 document.addEventListener('DOMContentLoaded', async () => {
     localStorage.clear();
@@ -41,14 +41,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         open_close_admins_painel();
         open_close_admins_painel_goals();
         open_close_spreadsheets();
-        /* const home_header = document.querySelector('.home-header');
+        const home_header = document.querySelector('.home-header');
         home_header.classList.add('hidden');
         const container = document.querySelector('.employees-main-painel-diary');
-        container.innerHTML = employee_diary_component(
-            'employee',
+        container.innerHTML = diary_component(
+            'write',
             get_current_date(),
             diary
         );
-        */
     }
 });

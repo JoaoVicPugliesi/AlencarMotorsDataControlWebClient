@@ -1,5 +1,5 @@
-import employee_component from "../components/employee_component.js";
-import admin_component from "../components/admin_component.js";
+import employee_component from "../components/employee/employee_component.js";
+import admin_component from "../components/admin/admin_component.js";
 
 function display_cards (container, component, employees, role) {
     if(!employees) return;

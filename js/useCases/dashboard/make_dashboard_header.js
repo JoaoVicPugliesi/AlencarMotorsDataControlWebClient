@@ -1,6 +1,6 @@
 import counters from "../../../data/counters.js";
 import default_data from "../../../data/default_data.js";
-import dashboard_header_component from "../../components/dashboard_header_component.js";
+import dashboard_header_component from "../../components/dashboard/dashboard_header_component.js";
 
 function make_dashboard_header(data, type) {
     if (!Array.isArray(data) || data.length === 0) {

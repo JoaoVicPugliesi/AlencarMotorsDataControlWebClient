@@ -1,4 +1,4 @@
-import employee_diary_component from "../components/employee_diary_component.js";
+import diary_component from "../components/diary/diary_component.js";
 import get_current_date from "./get_current_date.js";
 import show_message from "./show_message.js";
 import post_stats_diary from "../infra/use_cases/stat/post_stats_diary.js";
@@ -12,7 +12,7 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
             show_message(painel, 'error', `Não há dados para ${date.split('-').reverse().join('-')}`, 3000);
             return;
         }
-        container.innerHTML = employee_diary_component(
+        container.innerHTML = diary_component(
             mode,
             daily_data.date,
             daily_data.diary

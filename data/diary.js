@@ -1,7 +1,6 @@
 const diary = {
   title: "Sem título",
   description: `
-
 Meu Dia 
   Descrição: Suas palavras
 
