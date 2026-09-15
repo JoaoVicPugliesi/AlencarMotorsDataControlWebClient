@@ -1,54 +1,58 @@
 const diary = {
   title: "Sem título",
   description: `
-  LEADS CRM
-  - Nome da pessoa/contato
-    Status: 
 
-  LEADS CARCHAT
-  - Nome da pessoa/contato
-    Status: 
+Meu Dia 
+  Descrição: Suas palavras
 
-  LEADS ATD/FALADO
-  - Nome da pessoa/contato
-    Status: 
+LEADS CRM
+  Informações: Nome e telefone
+  Status: (Novo | Em atendimento | Sem retorno)
 
-  PROSPECÇÃO
-  - Nome da pessoa/contato
-    Status: 
+LEADS CARCHAT
+  Informações: Nome e telefone
+  Status: (Novo | Em atendimento | Sem retorno)
 
-  PROSPECÇÃO FALADA
-  - Nome da pessoa/contato
-    Status: 
+LEADS ATD/FALADO
+  Informações: Nome e telefone
+  Status: (Atendido | Interessado | Sem interesse)
 
-  PASSANTES
-  - Nome da pessoa/contato
-    Status: 
+PROSPECÇÃO
+  Informações: Nome e telefone
+  Status: (Novo contato | Interessado | Sem interesse)
 
-  SIMULAÇÕES REALIZADAS
-  - Nome da pessoa/contato
-    Status:
+PROSPECÇÃO FALADA
+  Informações: Nome e telefone
+  Status: (Conversou | Interessado | Sem interesse)
 
-  CADASTROS
-  - Nome da pessoa/contato
-    Status: 
+PASSANTES
+  Informações: Nome e telefone
+  Status: (Visitou a loja | Interessado | Sem interesse)
 
-  CADASTROS ENVIADOS
-  - Nome da pessoa/contato
-    Status: 
+SIMULAÇÕES REALIZADAS
+  Informações: Nome e telefone
+  Status: (Simulação realizada | Aguardando retorno | Não interessado)
 
-  CADASTROS APROVADOS
-  - Nome da pessoa/contato
-    Status: 
+CADASTROS
+  Informações: Nome e telefone
+  Status: (Em andamento | Aguardando documentos | Cancelado)
 
-  VENDAS EM NEGOCIAÇÃO
-  - Nome da pessoa/contato
-    Status: 
+CADASTROS ENVIADOS
+  Informações: Nome e telefone
+  Status: (Enviado | Em análise | Pendência)
 
-  VENDAS
-  - Nome da pessoa/contato
-    Status: 
-  `
+CADASTROS APROVADOS
+  Informações: Nome e telefone
+  Status: (Aprovado | Aguardando assinatura | Aguardando pagamento)
+
+VENDAS EM NEGOCIAÇÃO
+  Informações: Nome e telefone
+  Status: (Em negociação | Aguardando cliente | Fechamento)
+
+VENDAS
+  Informações: Nome e telefone
+  Status: (Venda realizada | Venda cancelada | Pós-venda)
+`
 };
 
 export default diary;
