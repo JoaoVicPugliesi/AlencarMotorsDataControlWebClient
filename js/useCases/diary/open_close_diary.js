@@ -2,6 +2,7 @@ import diary_component from "../../components/diary/diary_component.js";
 import get_current_date from "../../helpers/get_current_date.js";
 import show_message from "../../helpers/show_message.js";
 import get_stats from "../../infra/use_cases/stat/get_stats.js";
+import open_close_diary_customer_portifolios_add from "./open_close_diary_customer_portifolios_add.js";
 import open_close_diary_customer_portifolios_list from "./open_close_diary_customer_portifolios_list.js";
 
 function open_close_diary(id, el, mode, data, date, container, painel) {
@@ -55,6 +56,7 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
             });
         }
         open_close_diary_customer_portifolios_list();
+        open_close_diary_customer_portifolios_add();
     });
 }
 

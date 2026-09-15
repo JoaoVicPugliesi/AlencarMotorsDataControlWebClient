@@ -1,4 +1,4 @@
-function diary_header_component (date) {
+function diary_header_component (mode, date) {
     return ` 
         <div class="diary-header">
             <span class="diary-label">DIÁRIO</span>

@@ -162,6 +162,7 @@
     text-transform: uppercase;
     font-size: 1rem;
     text-align: center;
+    overflow: hidden;
 }
 
 .diary-customer-portifolios-commands.closed {
@@ -314,15 +315,12 @@
 .diary-customer-portifolios-comeback-command {
     width: 2rem;
     height: 3rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
     font-size: 1.25rem;
     color: var(--diary-color);
-
     transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
@@ -330,4 +328,73 @@
 .diary-customer-portifolios-reset-command:hover,
 .diary-customer-portifolios-comeback-command:hover {
     transform: scale(1.10);
+}
+
+.diary-customer-portifolios-add {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background-color-2);
+    padding: 1rem;
+    gap: 0.6rem;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    transition: transform ease-in 0.3s;
+}
+
+.diary-customer-portifolios-add.opened {
+    transform: translateX(0);
+}
+
+.diary-customer-portifolios-add input {
+    width: 100%;
+    height: 2.5rem;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0.25rem;
+    background: var(--diary-color);
+    color: var(--text-color);
+    padding: 0 0.75rem;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    outline: none;
+}
+
+.diary-customer-portifolios-add input::placeholder {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.diary-customer-portifolios-add input:focus {
+    box-shadow: 0 0 0 2px var(--blue-color);
+}
+
+.diary-customer-portifolios-add button {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background: var(--diary-color);
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.diary-customer-portifolios-add button:hover {
+    transform: translateY(-1px);
+}
+
+.diary-customer-portifolios-add button:active {
+    transform: translateY(0);
 }
