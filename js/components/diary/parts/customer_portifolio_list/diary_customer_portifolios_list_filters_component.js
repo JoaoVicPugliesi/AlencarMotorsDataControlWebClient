@@ -1,4 +1,4 @@
-function diary_customer_portifolios_list_filters () {
+function diary_customer_portifolios_list_filters_component () {
     return `
         <div class="diary-customer-portifolios-list-filters">
             <h3>Filtros:</h3>
@@ -17,4 +17,4 @@ function diary_customer_portifolios_list_filters () {
     `
 }
 
-export default diary_customer_portifolios_list_filters;
+export default diary_customer_portifolios_list_filters_component;

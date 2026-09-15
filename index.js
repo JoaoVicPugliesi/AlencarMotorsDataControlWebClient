@@ -17,6 +17,7 @@ import show_message from "./js/helpers/show_message.js";
 import diary from "./data/diary.js";
 import diary_component from "./js/components/diary/diary_component.js";
  */
+
 document.addEventListener('DOMContentLoaded', async () => {
     localStorage.clear();
     open_sandwich();
