@@ -1,8 +1,7 @@
-import diary_component from "../components/diary/diary_component.js";
-import get_current_date from "./get_current_date.js";
-import show_message from "./show_message.js";
-import post_stats_diary from "../infra/use_cases/stat/post_stats_diary.js";
-import get_stats from "../infra/use_cases/stat/get_stats.js";
+import diary_component from "../../components/diary/diary_component.js";
+import get_current_date from "../../helpers/get_current_date.js";
+import show_message from "../../helpers/show_message.js";
+import get_stats from "../../infra/use_cases/stat/get_stats.js";
 
 function open_close_diary(id, el, mode, data, date, container, painel) {
     el.removeEventListener('click', () => {});

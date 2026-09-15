@@ -1,4 +1,4 @@
-function diary_commands(mode) {
+function diary_commands_component(mode) {
     let commands;
     if (mode === 'write') {
         commands = `
@@ -25,4 +25,4 @@ function diary_commands(mode) {
     }
 }
 
-export default diary_commands;
+export default diary_commands_component;

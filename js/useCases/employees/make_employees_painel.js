@@ -1,6 +1,6 @@
 import counters from "../../../data/counters.js";
 import get_current_date from "../../helpers/get_current_date.js";
-import open_close_diary from "../../helpers/open_close_diary.js";
+import open_close_diary from "../diary/open_close_diary.js";
 
 function make_employees_painel(id, data, table, container, painel, role) {
     table.innerHTML = '';

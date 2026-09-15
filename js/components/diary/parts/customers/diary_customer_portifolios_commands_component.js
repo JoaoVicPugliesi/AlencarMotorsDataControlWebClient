@@ -1,13 +1,13 @@
-function diary_customer_portifolios_component (mode) {
+function diary_customer_portifolios_commands_component (mode) {
     let portifolios;
     if (mode === 'write') {
         portifolios = `
-            <div class="diary-customer-portifolios">
-                <div class="diary-customer-portifolios-list">
-                    <h3>Carteiras de clientes</h3>
+            <div class="diary-customer-portifolios-commands">
+                <div class="diary-customer-portifolios-list-command">
+                    <h3>Carteiras dos clientes</h3>
                     <i class="fa-solid fa-list"></i>
                 </div>
-                <div class="diary-customer-portifolios-add">
+                <div class="diary-customer-portifolios-add-command">
                     <h3>Adicionar carteira</h3>
                     <i class="fa-solid fa-plus"></i>
                 </div>
@@ -19,12 +19,12 @@ function diary_customer_portifolios_component (mode) {
 
     if (mode === 'read') {
         portifolios = `
-            <div class="diary-customer-portifolios">
-                <div class="diary-customer-portifolios-list">
+            <div class="diary-customer-portifolios-commands">
+                <div class="diary-customer-portifolios-list-command">
                     <h3>Carteiras de clientes</h3>
                     <i class="fa-solid fa-list"></i>
                 </div>
-                <div class="diary-customer-portifolios-add blocked">
+                <div class="diary-customer-portifolios-add-command blocked">
                     <h3>Adicionar carteira</h3>
                     <i class="fa-solid fa-plus"></i>
                 </div>
@@ -35,4 +35,4 @@ function diary_customer_portifolios_component (mode) {
 
 }
 
-export default diary_customer_portifolios_component;
+export default diary_customer_portifolios_commands_component;

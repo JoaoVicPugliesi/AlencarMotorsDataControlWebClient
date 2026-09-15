@@ -15,8 +15,8 @@ import display_spreadsheets_options from "./js/helpers/display_spreadsheets_opti
 import show_message from "./js/helpers/show_message.js";
 /* import get_current_date from "./js/helpers/get_current_date.js";
 import diary from "./data/diary.js";
-import diary_component from "./js/components/diary/diary_component.js"; */
-
+import diary_component from "./js/components/diary/diary_component.js";
+ */
 document.addEventListener('DOMContentLoaded', async () => {
     localStorage.clear();
     open_sandwich();

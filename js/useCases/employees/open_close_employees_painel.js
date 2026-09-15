@@ -1,11 +1,11 @@
 import scroll_to_section from "../../helpers/scroll_to_section.js";
 import make_employees_painel from "./make_employees_painel.js";
-import open_close_diary from "../../helpers/open_close_diary.js";
 import get_current_date from "../../helpers/get_current_date.js";
 import show_message from "../../helpers/show_message.js";
 import post_stats from "../../infra/use_cases/stat/post_stats.js";
 import post_login_employee from "../../infra/use_cases/employee/post_login_employee.js";
 import get_stats from "../../infra/use_cases/stat/get_stats.js";
+import open_close_diary from "../diary/open_close_diary.js";
 
 async function open_employees_painel_helper(btn) {
     const id = Number(btn.getAttribute('data-id'));

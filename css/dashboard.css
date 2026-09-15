@@ -287,7 +287,6 @@
     overflow-y: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    justify-content: start;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
