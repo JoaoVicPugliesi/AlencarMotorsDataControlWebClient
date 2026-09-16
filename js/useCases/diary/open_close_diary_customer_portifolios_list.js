@@ -5,11 +5,11 @@ import get_customers from "../../infra/use_cases/customer/get_customers.js";
 function display_customers(display, customers) {
     display.innerHTML = '';
     customers.forEach((c) => {
-        display.innerHTML += diary_customer_portifolio_component(c.name, c.phone, c.added_at);
+        display.innerHTML += diary_customer_portifolio_component(c.id, c.name, c.phone, c.added_at, c.origin, c.status, c.status_updated_at);
     });
 }
 
-async function open_diary_customer_portifolios_list_helper (parent, params) {
+async function open_diary_customer_portifolios_list_helper(parent, params) {
     console.log(params);
     const display = document.querySelector('.diary-customer-portifolios-list-display');
     const commands = document.querySelector('.diary-customer-portifolios-commands');
@@ -20,7 +20,7 @@ async function open_diary_customer_portifolios_list_helper (parent, params) {
         'Carregando carteiras'
     );
     const { status, json } = await get_customers(params);
-    console.log(status, json);  
+    console.log(status, json);
     loading_message.remove();
     if (status !== 200) {
         show_message(parent, 'error', json.message);
@@ -34,9 +34,9 @@ function open_diary_customer_portifolios_list(id) {
     const command = document.querySelector('.diary-customer-portifolios-list-command');
     const search = document.querySelector('.diary-customer-portifolios-search-command');
     const reset = document.querySelector('.diary-customer-portifolios-reset-command');
-    command.removeEventListener('click', () => {});
-    search.removeEventListener('click', () => {});
-    reset.removeEventListener('click', () => {});
+    command.removeEventListener('click', () => { });
+    search.removeEventListener('click', () => { });
+    reset.removeEventListener('click', () => { });
     const diary_page = document.querySelector('.diary-page');
     const list_input = document.querySelector('.diary-customer-portifolios-list-input');
     const date_input = document.querySelector('.diary-customer-portifolios-list-date-input');
@@ -49,31 +49,32 @@ function open_diary_customer_portifolios_list(id) {
             added_at: null
         }
         await open_diary_customer_portifolios_list_helper(diary_page, params);
-        reset.addEventListener('click', async () => {
-            params = {
-                employee_id: id,
-                name: null,
-                phone: null,
-                added_at: null
-            }
-            list_input.value = null;
-            date_input.value = null;
-            phone_input.value = null;
+    });
+
+    reset.addEventListener('click', async () => {
+        params = {
+            employee_id: id,
+            name: null,
+            phone: null,
+            added_at: null
+        }
+        list_input.value = null;
+        date_input.value = null;
+        phone_input.value = null;
+        await open_diary_customer_portifolios_list_helper(diary_page, params);
+    });
+    search.addEventListener('click', async () => {
+        if (!list_input.value && !date_input && !phone_input) {
             await open_diary_customer_portifolios_list_helper(diary_page, params);
-        });
-        search.addEventListener('click', async () => {
-            if(!list_input.value && !date_input && !phone_input) {
-                await open_diary_customer_portifolios_list_helper(diary_page, params);
-                return;
-            }
-            params = {
-                employee_id: id,
-                name: list_input.value,
-                phone: phone_input.value,
-                added_at: date_input.value
-            }
-            await open_diary_customer_portifolios_list_helper(diary_page, params);
-        });
+            return;
+        }
+        params = {
+            employee_id: id,
+            name: list_input.value,
+            phone: phone_input.value,
+            added_at: date_input.value
+        }
+        await open_diary_customer_portifolios_list_helper(diary_page, params);
     });
 }
 

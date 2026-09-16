@@ -264,6 +264,34 @@
     transform: translateY(-100%);
     transition: transform ease-in 0.3s;
     z-index: 5;
+    cursor: auto;
+    font-family: var(--text-font-1);
+    color: var(--background-color);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    text-wrap: nowrap;
+}
+
+.diary-customer-portifolio-info, .diary-customer-portifolio-info div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.diary-customer-portifolio-info div {
+    gap: 0.5rem;
+    width: 25%;
+    min-width: 10rem;
+    padding: 0.5rem;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.diary-customer-portifolio-info-update {
+    background: var(--text-color);
+    cursor: pointer;
 }
 
 .diary-customer-portifolio:hover .diary-customer-portifolio-info {
@@ -375,7 +403,8 @@
     transform: translateX(0);
 }
 
-.diary-customer-portifolios-add input {
+.diary-customer-portifolios-add input,
+.diary-customer-portifolios-add select {
     width: 100%;
     height: 2.5rem;
     box-sizing: border-box;
@@ -390,6 +419,13 @@
     outline: none;
 }
 
+.diary-customer-portifolios-add select {
+    cursor: pointer;
+}
+
+.diary-customer-portifolios-add select:focus {
+    box-shadow: 0 0 0 2px var(--blue-color);
+}
 .diary-customer-portifolios-add input::placeholder {
     color: rgba(0, 0, 0, 0.45);
 }
