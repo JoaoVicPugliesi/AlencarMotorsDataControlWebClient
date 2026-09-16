@@ -1,6 +1,9 @@
 function diary_customer_portifolio_component (name, phone, added) {
     return `
         <div class="diary-customer-portifolio">
+            <div class="diary-customer-portifolio-info">
+                <p>COMPROU</p>
+            </div>
             <div class="diary-customer-portifolio-phone">
                 <h3>${phone}</h3>
             </div>
