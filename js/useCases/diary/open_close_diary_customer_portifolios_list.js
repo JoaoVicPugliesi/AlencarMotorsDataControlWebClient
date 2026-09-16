@@ -18,9 +18,9 @@ function close_diary_customer_portifolios_list () {
     });
 }
 
-function open_close_diary_customer_portifolios_list () {
+function open_close_diary_customer_portifolios_list_caller () {
     open_diary_customer_portifolios_list();
     close_diary_customer_portifolios_list();
 }
 
-export default open_close_diary_customer_portifolios_list;
+export default open_close_diary_customer_portifolios_list_caller;

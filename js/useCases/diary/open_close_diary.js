@@ -3,8 +3,8 @@ import get_current_date from "../../helpers/get_current_date.js";
 import show_message from "../../helpers/show_message.js";
 import get_stats from "../../infra/use_cases/stat/get_stats.js";
 import post_stats_diary from "../../infra/use_cases/stat/post_stats_diary.js";
-import open_close_diary_customer_portifolios_add from "./open_close_diary_customer_portifolios_add.js";
-import open_close_diary_customer_portifolios_list from "./open_close_diary_customer_portifolios_list.js";
+import open_close_diary_customer_portifolios_add_caller from "./open_close_diary_customer_portifolios_add.js";
+import open_close_diary_customer_portifolios_list_caller from "./open_close_diary_customer_portifolios_list.js";
 
 function open_close_diary(id, el, mode, data, date, container, painel) {
     el.removeEventListener('click', () => { });
@@ -27,9 +27,12 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
         comeback.addEventListener('click', () => {
             container.classList.remove('opened');
         });
+        
         const save = container.querySelector(
             '.diary-save-command'
         );
+        open_close_diary_customer_portifolios_list_caller();
+        open_close_diary_customer_portifolios_add_caller(id);
         if (save) {
             save.removeEventListener('click', () => { })
             save.addEventListener('click', async () => {
@@ -62,8 +65,6 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
                 );
             });
         }
-        open_close_diary_customer_portifolios_list();
-        open_close_diary_customer_portifolios_add();
     });
 }
 

@@ -301,6 +301,10 @@
     width: 9rem;
 }
 
+.diary-customer-portifolios-list-filters input[type="tel"] {
+    flex: 1;
+    max-width: 20rem;
+}
 .diary-customer-portifolios-list-filters input[type="text"] {
     flex: 1;
     max-width: 20rem;

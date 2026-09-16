@@ -8,10 +8,10 @@ async function get_goal() {
         }
     });
     const status = request.status;
-    const goal = await request.json();
+    const json = await request.json();
     return {
         status: status,
-        goal: goal
+        goal: json.goal
     }
     
 }

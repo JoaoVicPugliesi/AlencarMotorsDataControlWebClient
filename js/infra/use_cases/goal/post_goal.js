@@ -1,8 +1,7 @@
 import show_message from "../../../helpers/show_message.js";
 import base_URL from "../../base_URL.js";
 
-async function post_goal() {
-    const admins_main_painel_goals = document.querySelector('.admins-main-painel-goals');
+function post_goal_helper() {
     const table = document.querySelector(
         '.admins-main-painel-goals-display'
     );
@@ -23,6 +22,12 @@ async function post_goal() {
             description: description.textContent.trim()
         });
     });
+    return goal_object;
+}
+
+async function post_goal() {
+    const admins_main_painel_goals = document.querySelector('.admins-main-painel-goals');
+    const goal_object = post_goal_helper();
     const { id, initial_date } = JSON.parse(localStorage.getItem('goal'));
     const current_date = new Date();
     const current_month =
@@ -41,14 +46,12 @@ async function post_goal() {
         },
         body: JSON.stringify(body)
     });
-
     const status = request.status;
     const json = await request.json();
-    if(status === 400) {
+    if (status === 400) {
         show_message(admins_main_painel_goals, 'error', json.message)
         return;
     }
-
     localStorage.setItem(
         'goal',
         JSON.stringify({

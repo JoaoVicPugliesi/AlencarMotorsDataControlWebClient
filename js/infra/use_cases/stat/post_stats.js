@@ -3,8 +3,7 @@ import get_current_date from '../../../helpers/get_current_date.js';
 import base_URL from "../../base_URL.js";
 import diary from "../../../../data/diary.js";
 
-async function post_stats(id, is_default) {
-    const employees_main_painel = document.querySelector('.employees-main-painel');
+function post_stats_helper (id, is_default) {
     const editable_cells = document.querySelectorAll(
         '.employees-main-painel-display td[data-editable="true"]'
     );
@@ -41,6 +40,12 @@ async function post_stats(id, is_default) {
             });
         }
     }
+    return body;
+}
+
+async function post_stats(id, is_default) {
+    const body = post_stats_helper(id, is_default);
+    const employees_main_painel = document.querySelector('.employees-main-painel');
     const request = await fetch(`${base_URL}/post_stats`, {
         method: 'POST',
         headers: {
@@ -48,16 +53,12 @@ async function post_stats(id, is_default) {
         },
         body: JSON.stringify(body)
     });
-
-
     const status = request.status;
     const json = await request.json();
-
     if (status === 400) {
         show_message(employees_main_painel, 'error', `${json.message}`);
         return;
     }
-
     show_message(employees_main_painel, 'success', `${json.message}`);
 }
 

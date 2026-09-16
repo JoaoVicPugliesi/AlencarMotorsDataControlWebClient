@@ -8,11 +8,11 @@ async function get_employees() {
         }
     });
     const status = request.status;
-    const employees = await request.json();
+    const json = await request.json();
 
     return {
         status: status,
-        employees: employees
+        employees: json.employees
     }
     
 }
