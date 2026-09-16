@@ -31,8 +31,6 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
         const save = container.querySelector(
             '.diary-save-command'
         );
-        open_close_diary_customer_portifolios_list_caller();
-        open_close_diary_customer_portifolios_add_caller(id);
         if (save) {
             save.removeEventListener('click', () => { })
             save.addEventListener('click', async () => {
@@ -65,6 +63,8 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
                 );
             });
         }
+        open_close_diary_customer_portifolios_list_caller(id);
+        open_close_diary_customer_portifolios_add_caller(id);
     });
 }
 

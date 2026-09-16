@@ -17,7 +17,7 @@ function diary_component(mode, date, diary) {
             ${diary_customer_portifolios_list_component()}
             ${diary_customer_portifolios_commands_component(mode)}
             ${diary_header_component(mode, splited_reversed_formatted)}
-            ${diary_main_input_component('employees-main-painel-diary-title', title)}
+            ${diary_main_input_component('employees-main-painel-diary-title', title, true)}
             ${diary_description_component(description)}
             ${diary_commands_component(mode)}
         </div>

@@ -104,9 +104,12 @@
     box-sizing: border-box;
 }
 
-.diary-customer-portifolios-list-input,
-.diary-customer-portifolios-list-input::placeholder {
+
+.diary-customer-portifolios-list-input, .diary-customer-portifolios-list-input::placeholder {
     color: var(--background-color);
+}
+
+.diary-customer-portifolios-list-input {
     border-bottom: 2px solid var(--background-color);
 }
 
@@ -237,7 +240,7 @@
     cursor: pointer;
     min-height: 5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
     font-size: 0.8rem;
