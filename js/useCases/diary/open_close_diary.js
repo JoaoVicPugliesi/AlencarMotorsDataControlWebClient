@@ -7,7 +7,6 @@ import open_close_diary_customer_portifolios_add_caller from "./open_close_diary
 import open_close_diary_customer_portifolios_list_caller from "./open_close_diary_customer_portifolios_list.js";
 
 function open_close_diary(id, el, mode, data, date, container, painel) {
-    el.removeEventListener('click', () => { });
     el.addEventListener('click', () => {
         const daily_data = data.find(item => item.date === date);
         if (!daily_data) {

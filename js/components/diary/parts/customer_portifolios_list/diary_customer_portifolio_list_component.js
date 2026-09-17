@@ -1,4 +1,9 @@
-function diary_customer_portifolio_component (id, name, phone, added, origin, status, last_updated) {
+function diary_customer_portifolio_list_component (id, name, phone, added, origin, status, status_updated_at) {
+    const update_params = {
+        id: id,
+        status: status,
+        status_updated_at: status_updated_at
+    }
     return `
         <div class="diary-customer-portifolio">
             <div class="diary-customer-portifolio-info">
@@ -6,15 +11,15 @@ function diary_customer_portifolio_component (id, name, phone, added, origin, st
                     <span>Origem: </span>
                     <h3>${origin}</h3>
                 </div> 
-                <div class="diary-customer-portifolio-info-origin">
+                <div class="diary-customer-portifolio-info-status">
                     <span>Status: </span>
                     <h3>${status}</h3>
                 </div> 
-                <div class="diary-customer-portifolio-info-last_updated">
+                <div class="diary-customer-portifolio-info-last-updated">
                     <span>Última atualização: </span>
-                    <h3>${last_updated.split('-').reverse().join('-')}</h3>
+                    <h3>${status_updated_at.split('-').reverse().join('-')}</h3>
                 </div> 
-                <div class="diary-customer-portifolio-info-update" data-id="${id}">
+                <div class="diary-customer-portifolio-info-update" data-params='${JSON.stringify(update_params)}'>
                     <span>Atualizar</span>
                     <i class="fa-solid fa-pen-to-square"></i>
                 </div> 
@@ -32,4 +37,4 @@ function diary_customer_portifolio_component (id, name, phone, added, origin, st
     `
 }
 
-export default diary_customer_portifolio_component;
+export default diary_customer_portifolio_list_component;
