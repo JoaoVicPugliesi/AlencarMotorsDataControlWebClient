@@ -1,4 +1,5 @@
 import diary_component from "../../components/diary/diary_component.js";
+import phone_input_formatter from "../../helpers/phone_input_formatter.js";
 import show_message from "../../helpers/show_message.js";
 import change_diary_date from "./change_diary_date.js";
 import open_close_diary_customer_portifolios_add_caller from "./open_close_diary_customer_portifolios_add.js";
@@ -28,6 +29,10 @@ function open_close_diary(id, el, mode, data, date, container, painel) {
         change_diary_date(id);
         open_close_diary_customer_portifolios_list_caller(id);
         open_close_diary_customer_portifolios_add_caller(id);
+        const input_one = document.querySelector('.diary-customer-portifolios-add-phone');
+        const input_two = document.querySelector('.diary-customer-portifolios-list-phone-input');
+        phone_input_formatter(input_one);
+        phone_input_formatter(input_two);
     });
 }
 

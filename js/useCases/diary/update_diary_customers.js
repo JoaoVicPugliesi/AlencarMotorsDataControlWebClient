@@ -39,7 +39,6 @@ function update_diary_customers() {
                     .split('-')
                     .reverse()
                     .join('-');
-            show_message(container, 'success', json.message);
         });
     })
 }
