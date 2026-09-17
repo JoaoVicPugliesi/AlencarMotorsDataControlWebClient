@@ -10,19 +10,20 @@ function open_admins_main_painel_goals() {
         if (!goal_object) return;
         make_employees_painel_goals(goal_object, 'admins-main-painel-goals-display', false);
         admins_main_painel_goals.classList.add('opened');
-        const save_command = document.querySelector(
-            '.admins-main-painel-goals-save-command'
-        );
-        save_command.addEventListener('click', async () => {
-            const loading_message = show_message(
-            admins_main_painel_goals,
-            'loading',
-            'Salvando metas'
-            );
-            await post_goal();
-            loading_message.remove();
-        })
     });
+    
+    const save_command = document.querySelector(
+        '.admins-main-painel-goals-save-command'
+    );
+    save_command.addEventListener('click', async () => {
+        const loading_message = show_message(
+        admins_main_painel_goals,
+        'loading',
+        'Salvando metas'
+        );
+        await post_goal();
+        loading_message.remove();
+    })
 }
 function close_admins_main_painel_goals() {
     const admins_main_painel_goals = document.querySelector('.admins-main-painel-goals');

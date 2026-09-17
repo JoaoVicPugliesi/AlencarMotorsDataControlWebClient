@@ -34,6 +34,7 @@ async function open_employees_painel_helper(btn) {
     }
     input.value = '';
     const { status: get_stats_today_status, json: get_stats_today_json } = await get_stats('today', null, null, id);
+    console.log(get_stats_today_status);
     if (get_stats_today_status === 404) {
         await post_stats(id, true);
     }
