@@ -89,6 +89,29 @@
     white-space: nowrap;
 }
 
+.diary-date-command {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diary-date-command input {
+    cursor: pointer;
+    width: 8.5rem;
+    height: 2rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: .35rem;
+    background: #f3e9d2;
+    color: #80162d;
+    font-family: inherit;
+    font-size: .95rem;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
 .employees-main-painel-diary-title,
 .diary-customer-portifolios-list-input {
     width: 100%;

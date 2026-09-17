@@ -7,16 +7,14 @@ import diary_customer_portifolios_list_component from "./parts/customer_portifol
 
 function diary_component(mode, date, diary) {
     const {
-        title,
-        description
+        title = 'Sem título',
+        description = 'Sem descrição'
     } = diary ?? {};
-    const splited_reversed_formatted =
-        date.split('-').reverse().join('-');
     return `
         <div class="diary-page">
             ${diary_customer_portifolios_list_component()}
             ${diary_customer_portifolios_commands_component(mode)}
-            ${diary_header_component(mode, splited_reversed_formatted)}
+            ${diary_header_component(mode, date)}
             ${diary_main_input_component('employees-main-painel-diary-title', title, true)}
             ${diary_description_component(description)}
             ${diary_commands_component(mode)}
