@@ -1,7 +1,6 @@
 import show_message from "../../../helpers/show_message.js";
 import get_current_date from '../../../helpers/get_current_date.js';
 import base_URL from "../../base_URL.js";
-import diary from "../../../../data/diary.js";
 
 function post_stats_helper (id, is_default) {
     const editable_cells = document.querySelectorAll(
@@ -26,7 +25,10 @@ function post_stats_helper (id, is_default) {
             registrations_made: 0,
             sales: 0,
             sales_in_negotiation: 0,
-            diary: diary
+            diary: {
+                title: 'Sem título',
+                description: 'Sem decrição'
+            }
         }
     } else {
         if (editable_cells) {
