@@ -26,7 +26,7 @@ async function post_stats_diary(id, diary) {
         return false;
     }
 
-    if (description.length < 100 || description.length > 2000) {
+    if (description.length < 50 || description.length > 2000) {
         show_message(
             diary_container,
             'error',
