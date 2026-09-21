@@ -26,11 +26,11 @@ async function post_stats_diary(id, diary) {
         return false;
     }
 
-    if (description.length < 500 || description.length > 5000) {
+    if (description.length < 100 || description.length > 2000) {
         show_message(
             diary_container,
             'error',
-            'A descrição deve ter entre 500 e 5000 caracteres'
+            'A descrição deve ter entre 50 e 2000 caracteres'
         );
         return false;
     }
