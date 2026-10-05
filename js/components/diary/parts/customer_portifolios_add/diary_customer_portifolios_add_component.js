@@ -9,6 +9,8 @@ function diary_customer_portifolios_add_component () {
                 <option value="crm">CRM</option>
                 <option value="carchat">Carchat</option>
                 <option value="indicação">Indicação</option>
+                <option value="whatsapp">Whatsapp</option>
+                <option value="instagram">Instagram</option>
             </select>
             <select class="diary-customer-portifolios-add-status">
                 <option value="" disabled selected>Status</option>
