@@ -17,6 +17,8 @@ Alencar Motors Data Control is responsible for capturing sales staff data via a 
 - User authentication
 - Real-time data updates
 - Real-time data analyses
+- Personal diary
+- Personal customer agenda
 
 ## 🛠️ Installation
 
